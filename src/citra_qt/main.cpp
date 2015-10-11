@@ -480,7 +480,7 @@ void GMainWindow::OnConfigure() {
 
 void GMainWindow::closeEvent(QCloseEvent* event) {
     // Save window layout
-    QSettings settings(QSettings::IniFormat, QSettings::UserScope, "Citra team", "Citra");
+    QSettings settings(QSettings::IniFormat, QSettings::UserScope, "Citra", "Citra");
 
     settings.beginGroup("UILayout");
     settings.setValue("geometry", saveGeometry());
@@ -520,7 +520,7 @@ int main(int argc, char* argv[]) {
 
     // Init settings params
     QSettings::setDefaultFormat(QSettings::IniFormat);
-    QCoreApplication::setOrganizationName("Citra team");
+    QCoreApplication::setOrganizationName("Citra");
     QCoreApplication::setApplicationName("Citra");
 
     QApplication::setAttribute(Qt::AA_X11InitThreads);
